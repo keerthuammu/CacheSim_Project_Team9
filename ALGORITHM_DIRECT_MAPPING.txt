@@ -1,0 +1,26 @@
+Step 1: Start
+Step 2: Read the sequence of block references
+Step 3: Read the cache size
+Step 4: Initialize
+
+4.1 Create an array cache[0 … cache_size – 1] and set all elements to None
+4.2 Set hits ← 0
+4.3 Set misses ← 0
+
+Step 5: For each block in the block reference sequence, do
+
+    5.1 Compute index ← block mod cache_size
+    5.2 If cache[index] = block then
+        hits ← hits + 1
+    5.3 Else
+        misses ← misses + 1
+        cache[index] ← block
+    5.4 Display block, cache contents, and hit/miss status
+
+Step 6: Compute results
+
+6.1 total ← hits + misses
+6.2 hit_ratio ← hits / total
+
+Step 7: Display total hits, total misses, and hit ratio
+Step 8: End
