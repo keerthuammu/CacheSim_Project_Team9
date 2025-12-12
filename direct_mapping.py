@@ -7,7 +7,7 @@ def direct_mapped_cache_sim(block_refs, cache_size):
     cache_size : int
         number of lines the cache has
     """
-    # Initialize cache lines (None = empty)
+    
     cache = [None] * cache_size
 
     hits = 0
@@ -17,19 +17,19 @@ def direct_mapped_cache_sim(block_refs, cache_size):
     print("------------------------------------")
 
     for block in block_refs:
-        # Compute cache index (Direct Mapping)
+      
         index = block % cache_size
 
-        # Check if hit or miss
+       
         if cache[index] == block:
             hits += 1
             status = "HIT"
         else:
             misses += 1
-            cache[index] = block  # bring this block into cache
+            cache[index] = block  
             status = "MISS"
 
-        # Display current cache contents
+      
         print(f"{block:9} | {cache} | {status}")
 
     total = hits + misses
