@@ -11,9 +11,9 @@ for ref in references:
     else:
         miss+=1
         status="MISS"
-    if len(cache)==cache_size:
-        cache.pop(0)
-    cache.append(ref)
+        if len(cache)==cache_size:
+            cache.pop(0)
+        cache.append(ref)
     print(ref,"\t",cache,"\t",status)
 hit_ratio=hit/(hit+miss)
 print("Total Hits:",hit)
