@@ -1,56 +1,64 @@
-def direct_mapped_cache_sim(block_refs, cache_size):
-    """
-    Simulate Direct Mapping cache.
+def print_cache(cache):
+    print("\nCurrent Cache State:")
+    for i, line in enumerate(cache):
+        print(f"Line {i}: Tag = {line['tag']}")
+    print("-" * 40)
 
-    block_refs : list of int
-        sequence of memory block references
-    cache_size : int
-        number of lines the cache has
-    """
+
+def main():
+    print("\n=== Direct Mapping Cache Simulation ===")
+    print("----------------------------------------")
+
     
-    cache = [None] * cache_size
+    cache_size = int(input("Enter number of cache lines: "))
 
+   
+    cache = [{"tag": None} for _ in range(cache_size)]
+
+   
     hits = 0
     misses = 0
 
-    print("Reference | Cache Content | Hit/Miss")
-    print("------------------------------------")
+    while True:
+        block = int(input("\nEnter block number (-1 to exit): "))
 
-    for block in block_refs:
-      
-        index = block % cache_size
+        if block == -1:
+            print("Exiting simulation...")
+            break
 
        
-        if cache[index] == block:
+        line = block % cache_size
+
+        print(f"\nBlock Number: {block}")
+        print(f"Mapped Cache Line: {line}")
+
+        
+        if cache[line]["tag"] == block:
+            print("Status: CACHE HIT")
             hits += 1
-            status = "HIT"
         else:
+            print("Status: CACHE MISS")
+            print(f"Loading block {block} into line {line}...")
+            cache[line]["tag"] = block
             misses += 1
-            cache[index] = block  
-            status = "MISS"
 
-      
-        print(f"{block:9} | {cache} | {status}")
+        
+        print_cache(cache)
 
+    
     total = hits + misses
-    hit_ratio = hits / total if total > 0 else 0
 
-    print("\nTotal References:", total)
-    print("Total Hits      :", hits)
-    print("Total Misses    :", misses)
-    print(f"Hit Ratio       : {hit_ratio:.2f}")
+    print("\n=== Simulation Summary ===")
+    print(f"Total References: {total}")
+    print(f"Total Hits: {hits}")
+    print(f"Total Misses: {misses}")
 
-    return hits, misses, hit_ratio
+    if total > 0:
+        hit_ratio = hits / total
+        print(f"Hit Ratio: {hit_ratio:.2f}")
+    else:
+        print("Hit Ratio: 0.00")
 
 
-# Example usage
 if __name__ == "__main__":
-    # Read user input: block references as space-separated ints
-    sequence = input("Enter block references (space-separated): ")
-    block_refs = list(map(int, sequence.strip().split()))
-
-    # Ask for cache size
-    cache_size = int(input("Enter number of cache lines: "))
-
-    # Run simulation
-    direct_mapped_cache_sim(block_refs, cache_size)
+    main()
