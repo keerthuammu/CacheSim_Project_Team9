@@ -27,15 +27,13 @@ def lfu_cache_simulation(references, cache_size):
 
         print(f"{ref}\t\t{cache}\t\t{status}")
 
-    # Final Output
+    
     print("\nTotal Hits:", hits)
     print("Total Misses:", misses)
     print("Hit Ratio:", round(hits / len(references), 2))
 
 
-# ---------------------------
-# Runtime Input
-# ---------------------------
+
 refs_input = input("Enter memory references (space-separated): ")
 references = list(map(int, refs_input.split()))
 
