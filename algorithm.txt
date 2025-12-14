@@ -1,0 +1,10 @@
+Step 1: Initialize an empty cache
+Step 2: Read cache size and memory reference sequence
+Step 3: For each memory reference:
+  • If reference exists in cache → Hit
+  • Remove it and reinsert at most-recent position
+  • Else → Miss
+  • If cache is full → remove least recently used element
+  • Insert new reference
+Step 4: Display cache contents after each step
+Step 5: Calculate total hits, misses, and hit ratio
