@@ -6,5 +6,5 @@ Simulation of Cache Memory Mapping Techniques and Replacement Algorithms using G
 ## Team Members and Roles
 1. Keerthana – LRU Replacement Algorithm
 2. Krishna – FIFO Replacement Algorithm
-3. Blamees – LFU Replacement Algorithm
+3. Lamees – LFU Replacement Algorithm
 4. Liya – Direct Mapping
