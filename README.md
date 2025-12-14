@@ -8,4 +8,4 @@
 | Lamees          | LRU (Least Recently Used)      |
 | Liya            | Direct Mapping                 |
 | Krishna         | FIFO (First In First Out)      |
-| Joseph Mathew   | Associative Mapping            |
+| Joseph Mathew   | Set Associative Mapping        |
