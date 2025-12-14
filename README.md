@@ -11,4 +11,4 @@ This project demonstrates the working of the Least Frequently Used (LFU) Page Re
 |             | Testing & Output Verification                 |
 
 ## Repository Link
-https://github.com/keerthuammu/DFCA-SE-Combined-Assignment.git
+https://github.com/keerthuammu/CacheSim_Project_Team9.git
