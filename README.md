@@ -1,13 +1,8 @@
 #CacheSim_Project_Team9
 
-##Team Members & Roles
-
-Keerthana M – LFU (Least Frequently Used) 
-
-Lamees – 
-
-Liya – 
-
-Krishna – 
-
-Joseph Mathew - Direct Mapping
+| **NAME**     | **ROLES**                   |
+|Keerthana M   | LFU (Least Frequently Used) | 
+|Lamees        | LRU(least Frequently Used)  |
+|Liya          | Direct Mapping              |
+|Krishna       | FIFO(First In First Out)    |
+|Joseph Mathew | Associative Mapping         |
