@@ -1,2 +1,8 @@
 # CacheSim_Project_Team9
-#project title
+#PROJECT TITLE
+#Simulation cache memory mapping techniques and repalcement algorithms using git collaboration
+#TEAM MEMBERS AND ROLES
+1.KEERTHANA-LRU REPLACEMENT ALGORITHM
+2.KRISHNA-FIFO REPLACEMENT ALGORITHM
+3LAMEES-LFU REPLACEMENT ALGORITHM
+4LIYA-DIRECT MAPPING
