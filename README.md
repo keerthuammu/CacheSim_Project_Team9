@@ -12,6 +12,5 @@
 | Krishna         | FIFO (First In First Out)      |
 | Joseph Mathew   | Associative Mapping            |
 
-=======
 
 
