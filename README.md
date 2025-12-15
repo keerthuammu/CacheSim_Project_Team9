@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CacheSim_Project_Team9
 
 ===================================================================
@@ -9,3 +10,4 @@
 | Liya            | Direct Mapping                 |
 | Krishna         | FIFO (First In First Out)      |
 | Joseph Mathew   | Associative Mapping            |
+
