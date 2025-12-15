@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # CacheSim_Project_Team9
 
 ===================================================================
@@ -11,3 +12,6 @@
 | Krishna         | FIFO (First In First Out)      |
 | Joseph Mathew   | Associative Mapping            |
 
+=======
+
+>>>>>>> d4e7f234a60fb70e9cbaadedfbe8733a077cee47
