@@ -1,0 +1,55 @@
+Step 1: Start
+Step 2: Read Cache Configuration
+Read:
+•	Number of cache sets (NUM_SETS)
+•	Associativity (number of cache lines per set)
+•	Cache replacement policy (LRU / FIFO / RANDOM)
+Step 3: Initialize Cache Structure
+•	Create an empty cache with NUM_SETS sets.
+•	Each set can hold up to ASSOCIATIVITY blocks.
+•	If policy is FIFO, initialize a FIFO queue for each set.
+Step 4: Initialize Counters
+•	Set hit counter = 0
+•	Set miss counter = 0
+Step 5: Read Memory Block Reference Sequence
+Read the list of memory block references to be accessed.
+Step 6: For Each Memory Block, Perform the Following:
+Step 6.1: Determine Block Number and Tag
+•	Treat the memory reference as the block number.
+•	Compute tag using:
+tag = block_number / number_of_sets
+Step 6.2: Compute Set Index
+•	Calculate set index using:
+set_index = block_number mod number_of_sets
+Step 6.3: Select Cache Set
+•	Access the cache set corresponding to the computed set index.
+Step 6.4: Search for Block in Cache Set
+•	Check whether the block already exists in the selected set.
+Step 6.5: If Block is Found (Cache Hit)
+•	Increment hit counter.
+•	If replacement policy is LRU, move the accessed block to the most recently used position.
+•	Return HIT.
+Step 6.6: If Block is Not Found (Cache Miss)
+•	Increment miss counter.
+•	Create a new block entry with block number and tag.
+Step 6.7: If Free Space Exists in the Set
+•	Insert the new block into the cache set.
+•	If policy is FIFO, update the FIFO queue.
+Step 6.8: If Cache Set is Full
+•	Select a victim block based on the replacement policy:
+o	LRU: Remove the least recently used block.
+o	FIFO: Remove the block that entered first using FIFO queue.
+o	RANDOM: Remove a randomly selected block.
+•	Insert the new block into the cache set.
+Step 7: Display Cache State (Optional After Accesses)
+•	Display all cache sets showing block number and tag order.
+Step 8: Repeat
+Repeat Step 6 for all memory block references.
+Step 9: Calculate Performance Metrics
+•	Total accesses = hits + misses
+•	Hit ratio = hits / (hits + misses)
+Step 10: Display Final Results
+•	Display total hits
+•	Display total misses
+•	Display hit ratio
+Step 11: Stop
